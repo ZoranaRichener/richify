@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&family=Pacifico&display=swap');
+
+:root {
+    --blue: #00C0EF;
+    --pink: #E6275C;
+    --white: #fff;
+    --gray: #767d85;
+    --bodyFont: 'Montserrat', sans-serif;
+    --transition: .3s ease;
+    --font: 16px;
+}
+/******************
+basic styles
+******************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: var(--font);
+    font-family: var(--bodyFont);
+    color: var(--gray);
+    line-height: 1.6;
+}
+button {
+    background: var(--blue);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+button:hover {
+    cursor: pointer;
+    background: var(--pink);
+    transition: var(--transition);
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+/*
+.clearfix {
+    clear: both;
+}
+*/
+/******************
+header
+******************/
+header {
+    background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)),url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 200px;
+}
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: var(--pink);
+    margin-bottom: 30px;
+}
+header p {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+/******************
+one
+******************/
+.one {
+    padding: 80px 0;
+}
+.one article {
+    width: 33%;
+    float: left;
+    padding: 30px;
+}
+.one img {
+    width: 100%;
+    border-radius: 50%;
+}
+.one h2 {
+    color: var(--pink);
+    padding-bottom: 10px;
+}
+.one article:nth-child(1) {
+    text-align: right;
+    padding-top: 60px;
+}
+.one article:nth-child(3) {
+    padding-top: 60px;
+}
+/******************
+two
+******************/
+.two {
+    background: var(--blue);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+.two h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+.two blockquote {
+    opacity: .6;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+.two h5 {
+    font-size: 1.1rem;
+}
+.two p {
+    opacity: .6;
+}
+/******************
+three
+******************/
+.three {
+    padding: 80px 0;
+}
+.three article {
+    width: 33%;
+    float: left;
+}
+.three article .wrapper {
+    margin: 30px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
+.three .img1 {
+    background-image: url(img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+.three .img2 {
+    background-image: url(img/img2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+.three .img3 {
+    background-image: url(img/img3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+.three .text {
+    padding: 30px;
+    text-align: justify;
+}
+.three h3 {
+    color: var(--pink);
+    font-size: 1.5rem;
+}
+/******************
+footer
+******************/
+footer {
+    background: var(--pink);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+footer h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+footer .three-columns article {
+    width: 33%;
+    float: left;
+    padding: 30px
+}
+footer i {
+    color: var(--blue);
+}
+
+.copyright {
+    background-color: var( --pink);
+    padding: 26px 0;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+    font:var(--bodyFont);
+}
+/******************
+R E S P O N S I V E
+******************/
+@media(max-width: 768px) {
+    header  {
+        padding: 40px;
+/*        background: lightgray;*/
+/*        display: none;*/
+/*        visibility: hidden;*/
+    }
+    .one article {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+    .one article:nth-child(1) {
+        text-align: left;
+    }
+    .three article {
+        width: 100%;
+        float: left;
+    }
+    footer .three-columns article {
+        width: 100%;
+    }
+}
+
+
